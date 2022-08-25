@@ -45,7 +45,7 @@ export function Navbar() {
         <Flex
           w="50vw"
           display={display}
-          bgColor="gray.200"
+          bgColor="gray.500"
           zIndex={20}
           h="100vh"
           pos="fixed"

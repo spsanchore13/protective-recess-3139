@@ -20,6 +20,9 @@ function HomePage() {
         <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw10c21dc4/images/Fall2022/boc-launch-prospects_hm_0.gif?yocs=s_" />
       </Box>
       <Box p={5}>
+        <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw32f3ac58/images/Fall2022/cndl_pumpkinbreadth_fa1_hm.gif?yocs=s_" />
+      </Box>
+      <Box p={5}>
         <Box h="400px">
           <Text align="center" fontSize="3xl" mb={5}>
             TODAY'S TOP OFFERS
@@ -41,7 +44,7 @@ function HomePage() {
       <Box p={5}>
         <Box h="400px">
           <Text align="center" fontSize="3xl" mb={5}>
-            TODAY'S TOP OFFERS
+            SHOP BY CATEGORIES
           </Text>
           <Grid templateColumns="repeat(6, 1fr)" gap={6}>
             <GridItem h="300" bg="blue.500">
@@ -72,12 +75,22 @@ function HomePage() {
 
       <Box mt={10} p={5}>
         <SimpleGrid columns={[1, 1, 2, 2]} spacing={10}>
-          <Box bg="tomato" height="500px"></Box>
-          <Box bg="tomato" height="500px"></Box>
-          <Box bg="tomato" height="500px"></Box>
-          <Box bg="tomato" height="500px"></Box>
-          <Box bg="tomato" height="500px"></Box>
-          <Box bg="tomato" height="500px"></Box>
+          <Box>
+            <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwa2209c56/images/Fall2022/bc_midamber_sfl_fa1_atb.jpg?yocs=o_s_" />
+          </Box>
+          <Box bgColor="red"></Box>
+          <Box>
+            <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw241908af/images/Fall2022/xcat_roadtrip_fa1_hps.jpg?yocs=o_s_" />
+          </Box>
+          <Box>
+            <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwe67edd78/images/Fall2022/xcat_ingredientled_fa1_hps.jpg?yocs=o_s_" />
+          </Box>
+          <Box>
+            <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw48de6656/images/Fall2022/xcat_fall_pumpkin_fa1_hps.jpg?yocs=o_s_" />
+          </Box>
+          <Box>
+            <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw79491a41/images/Fall2022/bc_at_sanctuary_fa1_hps.jpg?yocs=o_s_" />
+          </Box>
         </SimpleGrid>
       </Box>
 
