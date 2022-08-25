@@ -1,10 +1,10 @@
-import { Text } from "@chakra-ui/react"
+
+import Footer from "./component/Footer";
 
 function App() {
   return (
     <div className="App">
-
-      <Text>hello Shantila patliya</Text>
+      <Footer />
     </div>
   );
 }
