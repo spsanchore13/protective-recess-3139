@@ -105,7 +105,7 @@ function Footer() {
         />
       </Flex>
       <Box height="100px" mt={25}>
-        <HStack justify="center" spacing={5}>
+        <SimpleGrid columns={[1, 3, 7]}>
           <Button variant="link" fontSize="14px">
             Terms Of Use
           </Button>
@@ -118,17 +118,16 @@ function Footer() {
           <Button variant="link" fontSize="14px">
             California Privacy Rights
           </Button>
-          <Button variant="link" fontSize="14px">
-            Do Not Sell My Personal Information (California)
+          <Button variant="link" fontSize="14px" mr={5}>
+            Do Not Sell My Personal <br /> Information (California)
           </Button>
           <Button variant="link" fontSize="14px">
-            {" "}
             Transparency in Supply Chains
           </Button>
           <Button variant="link" fontSize="14px">
             Ad Preferences
           </Button>
-        </HStack>
+        </SimpleGrid>
         <Text align="center" p={10}>
           © 2022 Bath & Body Works Direct, Inc. All Rights Reserved.
         </Text>
