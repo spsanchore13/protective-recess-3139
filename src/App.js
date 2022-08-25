@@ -1,11 +1,16 @@
-import { Text } from "@chakra-ui/react"
+// import { Text } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react";
+import HomePage from "./components/HomePage/HomePage";
+import { Navbar } from "./components/Navbar/Navbar";
+import Topbar from "./components/Navbar/Topbar";
 
 function App() {
   return (
-    <div className="App">
-
-      <Text>hello Shantila patliya</Text>
-    </div>
+    <Box className="App">
+      <Topbar />
+      <Navbar />
+      <HomePage />
+    </Box>
   );
 }
 
