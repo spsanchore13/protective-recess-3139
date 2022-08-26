@@ -1,15 +1,16 @@
 // import { Text } from "@chakra-ui/react"
 import { Box } from "@chakra-ui/react";
-import HomePage from "./components/HomePage/HomePage";
-import { Navbar } from "./components/Navbar/Navbar";
+
 import Topbar from "./components/Navbar/Topbar";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
   return (
     <Box className="App">
+
+      <AllRoutes />
       <Topbar />
-      <Navbar />
-      <HomePage />
+
     </Box>
   );
 }

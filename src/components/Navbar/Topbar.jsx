@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Icon, Spacer, Stack, Text } from "@chakra-ui/react";
+import { Flex, Spacer, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Topbar2 from "./Topbar2";

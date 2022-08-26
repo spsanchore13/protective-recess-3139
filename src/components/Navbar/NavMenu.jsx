@@ -1,15 +1,6 @@
-import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Button,
-  Flex,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+
+import UserMenu from "../UserMenu/UserMenu";
 import BodyCareMenu from "./BodyCareMenu";
 import CandleMenu from "./CandleMenu";
 import { DarkModeBtn } from "./DarkMode";
@@ -21,8 +12,6 @@ import MensMenu from "./MensMenu";
 import TopOfferMenu from "./TopOfferMenu";
 
 function NavMenu() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <Flex justify="center" gap={10} display={["none", "none", "flex", "flex"]}>
       <TopOfferMenu />
@@ -34,6 +23,7 @@ function NavMenu() {
       <GiftsMenu />
       <FallShopMenu />
       <DarkModeBtn />
+      <UserMenu />
     </Flex>
   );
 }

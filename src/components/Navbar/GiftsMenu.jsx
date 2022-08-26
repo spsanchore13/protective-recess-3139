@@ -1,10 +1,8 @@
-import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import {
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
-  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 
