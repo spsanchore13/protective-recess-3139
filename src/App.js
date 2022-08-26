@@ -1,10 +1,10 @@
 import { Text } from "@chakra-ui/react"
+import ProductPage from "./component/ProductPage";
 
 function App() {
   return (
     <div className="App">
-
-      <Text>hello Shantila patliya</Text>
+      <ProductPage />
     </div>
   );
 }
