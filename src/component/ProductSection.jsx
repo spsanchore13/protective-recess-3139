@@ -8,9 +8,24 @@ import {
   SimpleGrid,
   Spacer,
   Text,
+  VStack,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import CartPage from "./CartPage";
 
-function ProductSection() {
+function ProductSection({ product }) {
+  // console.log(product);
+  const [cart, setCart] = useState([]);
+  // console.log(cart);
+  const handleAdd = (item) => {
+    // console.log(item);
+    setCart([...cart, item]);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
   return (
     <>
       <SimpleGrid p={5}>
@@ -60,10 +75,22 @@ function ProductSection() {
         <Text ml={5}>SHOP YOUR STORE: set store</Text>
         <Divider mt={2} />
       </SimpleGrid>
-
-      <SimpleGrid>
-        <Box></Box>
+      <SimpleGrid columns={[2, 3, 4, 4]} spacing={5} p={5}>
+        {product &&
+          product.map((item) => (
+            <Box key={item.id}>
+              <VStack>
+                <Img src={item.image_link} alt="Not Found" />
+                <Text>{item.name}</Text>
+                <Text>{item.brand}</Text>
+                <Text>{item.product_type}</Text>
+                <Text>{item.price}</Text>
+                <Button onClick={() => handleAdd(item)}>Add To Cart</Button>
+              </VStack>
+            </Box>
+          ))}
       </SimpleGrid>
+      <CartPage />
     </>
   );
 }

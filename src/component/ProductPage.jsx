@@ -1,13 +1,26 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import ProductSection from "./ProductSection";
-import SideNavigation from "./SideNavigation";
+// import SideNavigation from "./SideNavigation";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+function getData() {
+  return axios.get(
+    `https://pratappura-server.herokuapp.com/products?_limit=30`
+  );
+}
 
 function ProductPage() {
+  const [product, setProduct] = useState([]);
+  // console.log(product);
+  useEffect(() => {
+    getData().then((res) => {
+      setProduct(res.data);
+    });
+  }, []);
+
+  // console.log(product);
+
   return (
     <>
       <Breadcrumb fontWeight="medium" fontSize="sm">
@@ -24,7 +37,7 @@ function ProductPage() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <ProductSection />
+      <ProductSection product={product} />
     </>
   );
 }

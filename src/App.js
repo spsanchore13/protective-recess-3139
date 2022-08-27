@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react"
+
 import ProductPage from "./component/ProductPage";
 
 function App() {
