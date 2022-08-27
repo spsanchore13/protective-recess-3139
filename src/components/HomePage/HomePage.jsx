@@ -1,10 +1,9 @@
 import {
   Box,
+  Button,
   Flex,
   Grid,
   GridItem,
-  HStack,
-  Icon,
   IconButton,
   Img,
   SimpleGrid,
@@ -27,14 +26,57 @@ function HomePage() {
           <Text align="center" fontSize="3xl" mb={5}>
             TODAY'S TOP OFFERS
           </Text>
-          <Grid templateColumns="repeat(5, 1fr)" gap={6}>
-            <GridItem w="100%" h="300" bg="blue.500">
-              <Text>Today Only!</Text>
+          <Grid
+            bgColor="gray.100"
+            p={10}
+            templateColumns="repeat(5, 1fr)"
+            gap={6}
+          >
+            <GridItem w="100%" h="200" bg="white" p={14}>
+              <VStack>
+                <Text>Today Only!</Text>
+                <Text>$10 Off</Text>
+                <Button w="100%" bgColor="black" color="white">
+                  SHOP
+                </Button>
+              </VStack>
             </GridItem>
-            <GridItem w="100%" h="300" bg="blue.500" />
-            <GridItem w="100%" h="300" bg="blue.500" />
-            <GridItem w="100%" h="300" bg="blue.500" />
-            <GridItem w="100%" h="300" bg="blue.500" />
+            <GridItem w="100%" h="200" bg="white" p={14}>
+              <VStack>
+                <Text>Today Only!</Text>
+                <Text>$10 Off</Text>
+                <Button w="100%" bgColor="black" color="white">
+                  SHOP
+                </Button>
+              </VStack>
+            </GridItem>
+            <GridItem w="100%" h="200" bg="white" p={14}>
+              <VStack>
+                <Text>Today Only!</Text>
+                <Text>$10 Off</Text>
+                <Button w="100%" bgColor="black" color="white">
+                  SHOP
+                </Button>
+              </VStack>
+            </GridItem>
+            <GridItem w="100%" h="200" bg="white" p={14}>
+              <VStack>
+                <Text>Today Only!</Text>
+                <Text>$10 Off</Text>
+                <Button w="100%" bgColor="black" color="white">
+                  SHOP
+                </Button>
+              </VStack>
+            </GridItem>
+            <GridItem w="100%" h="200" bg="white" p={14}>
+              <VStack>
+                <Text>Today Only!</Text>
+                <Text>$10 Off</Text>
+                <Button w="100%" bgColor="black" color="white">
+                  SHOP
+                </Button>
+              </VStack>
+            </GridItem>
           </Grid>
         </Box>
       </Box>
@@ -47,14 +89,30 @@ function HomePage() {
             SHOP BY CATEGORIES
           </Text>
           <Grid templateColumns="repeat(6, 1fr)" gap={6}>
-            <GridItem h="300" bg="blue.500">
-              <Text>Today Only!</Text>
+            <GridItem>
+              <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.217/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw415d6bf8/images/Fall2022/bc_midamber_sfl_fa1_vn2.jpg?yocs=o_s_" />
+              <Text align="center">Today Only!</Text>
             </GridItem>
-            <GridItem h="300" bg="blue.500" />
-            <GridItem w="100%" h="300" bg="blue.500" />
-            <GridItem w="100%" h="300" bg="blue.500" />
-            <GridItem w="100%" h="300" bg="blue.500" />
-            <GridItem w="100%" h="300" bg="blue.500" />
+            <GridItem>
+              <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.217/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwc2ca0b55/images/Fall2022/cndl_roadtrip_fa1_vn.jpg?yocs=o_s_" />
+              <Text align="center">Today Only!</Text>
+            </GridItem>
+            <GridItem>
+              <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.217/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwf6577e0c/images/Fall2022/diff_Ingredient_fa1_vn.jpg?yocs=o_s_" />
+              <Text align="center">Today Only!</Text>
+            </GridItem>
+            <GridItem>
+              <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.217/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw806578a9/images/Fall2022/sp_roadtrip_decor_fa1_vn.jpg?yocs=o_s_" />
+              <Text align="center">Today Only!</Text>
+            </GridItem>
+            <GridItem>
+              <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.217/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwc728cf91/images/Fall2022/bc_at_sanctuary_fa1_vn2.jpg?yocs=o_s_" />
+              <Text align="center">Today Only!</Text>
+            </GridItem>
+            <GridItem>
+              <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.217/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw5a02a7ff/images/Fall2022/bc_ingredientled_fa1_vn2.jpg?yocs=o_s_" />
+              <Text align="center">Today Only!</Text>
+            </GridItem>
           </Grid>
         </Box>
       </Box>
