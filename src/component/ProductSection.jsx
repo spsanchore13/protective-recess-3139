@@ -10,21 +10,22 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import CartPage from "./CartPage";
+import { useContext } from "react";
+import { AppContext } from "../Contexts/AppContext";
 
 function ProductSection({ product }) {
-  // console.log(product);
-  const [cart, setCart] = useState([]);
-  // console.log(cart);
-  const handleAdd = (item) => {
-    // console.log(item);
-    setCart([...cart, item]);
-  };
+  const { setCartProduct, cartProduct } = useContext(AppContext);
 
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+  // const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   localStorage.setItem("product", JSON.stringify(data));
+  // }, [data]);
+
+  const handleAdd = (item) => {
+    // setData([...data, item]);
+    setCartProduct([...cartProduct, item]);
+  };
 
   return (
     <>
@@ -80,17 +81,20 @@ function ProductSection({ product }) {
           product.map((item) => (
             <Box key={item.id}>
               <VStack>
-                <Img src={item.image_link} alt="Not Found" />
-                <Text>{item.name}</Text>
-                <Text>{item.brand}</Text>
-                <Text>{item.product_type}</Text>
-                <Text>{item.price}</Text>
+                <Img
+                  boxSize="200px"
+                  src={item.api_featured_image}
+                  alt="Not Found"
+                />
+                <Text>Name: {item.name}</Text>
+                <Text>Brand: {item.brand}</Text>
+                <Text>Category: {item.product_type}</Text>
+                <Text>Price: {item.price} $</Text>
                 <Button onClick={() => handleAdd(item)}>Add To Cart</Button>
               </VStack>
             </Box>
           ))}
       </SimpleGrid>
-      <CartPage />
     </>
   );
 }

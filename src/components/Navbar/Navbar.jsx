@@ -1,16 +1,16 @@
 import {
-  Box,
   Button,
   Flex,
   HStack,
   IconButton,
   Img,
+  // Spacer,
   // useColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { useState } from "react";
-import Topbar from "./Topbar";
-import TopOfferMenu from "./TopOfferMenu";
+import { Navigate } from "react-router-dom";
+// import { DarkModeBtn } from "./DarkMode";
 export function Navbar() {
   // const { colorMode, toggleColorMode } = useColorMode();
   // console.log(colorMode);
@@ -18,8 +18,8 @@ export function Navbar() {
   const [display, changeDisplay] = useState("none");
   return (
     <>
-      <Flex mb={50}>
-        <Flex position="fixed" top="1rem" left="1rem" w="90%">
+      <Flex>
+        <HStack position="fixed" w="100%" p={2}>
           <IconButton
             aria-label="Open Menu"
             mr={2}
@@ -29,14 +29,14 @@ export function Navbar() {
             display={["flex", "flex", "none", "none"]}
           />
           <Img
+            onClick={() => <Navigate to="/" />}
             display={["flex", "flex", "none", "none"]}
             position="absolute"
             left="5rem"
-            top="0.7rem"
             w="300px"
             src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dwd76d640f/images/svg-icons/Logos-main.svg?yocs=o_s_"
           />
-        </Flex>
+        </HStack>
       </Flex>
 
       {/* {Mobile } */}
@@ -68,18 +68,16 @@ export function Navbar() {
               icon={<CloseIcon />}
             />
           </Flex>
-          <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
+          <Button variant="ghost" aria-label="Home" my={5} w="100%">
             Home
           </Button>
 
-          <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
-            About
+          <Button variant="ghost" aria-label="About" my={5} w="100%">
+            Product
           </Button>
-
-          <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
-            Contact
+          <Button variant="ghost" aria-label="Contact" my={5} w="100%">
+            Cart
           </Button>
-          <TopOfferMenu />
         </Flex>
       </Flex>
     </>

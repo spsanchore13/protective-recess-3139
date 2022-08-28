@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 function getData() {
   return axios.get(
-    `https://pratappura-server.herokuapp.com/products?_limit=30`
+    `https://pratappura-server.herokuapp.com/products?_limit=100`
   );
 }
 
@@ -23,17 +23,13 @@ function ProductPage() {
 
   return (
     <>
-      <Breadcrumb fontWeight="medium" fontSize="sm">
+      <Breadcrumb fontWeight="medium" fontSize="sm" p={5}>
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">Home</BreadcrumbLink>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
         </BreadcrumbItem>
 
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">About</BreadcrumbLink>
-        </BreadcrumbItem>
-
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink href="#">Current</BreadcrumbLink>
+          <BreadcrumbLink href="/product">Product</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
 

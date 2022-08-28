@@ -6,12 +6,15 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaLocationArrow, FaUser } from "react-icons/fa";
+import { AppContext } from "../../Contexts/AppContext";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 
 function UserMenu() {
+  const { isAuth, setIsAuth } = useContext(AppContext);
+
   const [isLoginVisible, setLoginVisible] = useState(false);
   const [isSinUpVisible, setSinUpVisible] = useState(false);
   return (
@@ -25,12 +28,22 @@ function UserMenu() {
           variant="outline"
         />
         <MenuList>
-          <MenuItem icon={<FaUser />} onClick={() => setLoginVisible(true)}>
-            Login
-          </MenuItem>
-          <MenuItem icon={<FaUser />} onClick={() => setSinUpVisible(true)}>
-            Sign Up
-          </MenuItem>
+          {isAuth ? (
+            <MenuItem icon={<FaUser />} onClick={() => setIsAuth(false)}>
+              Log Out
+            </MenuItem>
+          ) : (
+            <MenuItem icon={<FaUser />} onClick={() => setLoginVisible(true)}>
+              Login
+            </MenuItem>
+          )}
+
+          {isAuth ? null : (
+            <MenuItem icon={<FaUser />} onClick={() => setSinUpVisible(true)}>
+              Sign Up
+            </MenuItem>
+          )}
+
           <MenuItem icon={<FaLocationArrow />}>Order Tracking</MenuItem>
           <MenuItem icon={<RepeatIcon />}>My Auto Refresh</MenuItem>
         </MenuList>

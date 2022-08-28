@@ -13,18 +13,25 @@ import TopOfferMenu from "./TopOfferMenu";
 
 function NavMenu() {
   return (
-    <Flex justify="center" gap={10} display={["none", "none", "flex", "flex"]}>
-      <TopOfferMenu />
-      <BodyCareMenu />
-      <CandleMenu />
-      <HomeFragranceMenu />
-      <HandSoapAndSanitizersMenu />
-      <MensMenu />
-      <GiftsMenu />
-      <FallShopMenu />
-      <DarkModeBtn />
-      <UserMenu />
-    </Flex>
+    <>
+      <Flex
+        justify="center"
+        gap={10}
+        display={["none", "none", "flex", "flex"]}
+        p={5}
+      >
+        <TopOfferMenu />
+        <BodyCareMenu />
+        <CandleMenu />
+        <HomeFragranceMenu />
+        <HandSoapAndSanitizersMenu />
+        <MensMenu />
+        <GiftsMenu />
+        <FallShopMenu />
+        <DarkModeBtn />
+        <UserMenu />
+      </Flex>
+    </>
   );
 }
 

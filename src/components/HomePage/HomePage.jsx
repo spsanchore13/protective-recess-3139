@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Flex,
-  Grid,
   GridItem,
   IconButton,
   Img,
@@ -22,17 +21,12 @@ function HomePage() {
         <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw32f3ac58/images/Fall2022/cndl_pumpkinbreadth_fa1_hm.gif?yocs=s_" />
       </Box>
       <Box p={5}>
-        <Box h="400px">
+        <Box color="pink.500">
           <Text align="center" fontSize="3xl" mb={5}>
             TODAY'S TOP OFFERS
           </Text>
-          <Grid
-            bgColor="gray.100"
-            p={10}
-            templateColumns="repeat(5, 1fr)"
-            gap={6}
-          >
-            <GridItem w="100%" h="200" bg="white" p={14}>
+          <SimpleGrid bgColor="gray.100" p={10} columns={[1, 2, 5]} gap={6}>
+            <GridItem w="100%" bg="white" p={10}>
               <VStack>
                 <Text>Today Only!</Text>
                 <Text>$10 Off</Text>
@@ -41,7 +35,7 @@ function HomePage() {
                 </Button>
               </VStack>
             </GridItem>
-            <GridItem w="100%" h="200" bg="white" p={14}>
+            <GridItem w="100%" bg="white" p={10}>
               <VStack>
                 <Text>Today Only!</Text>
                 <Text>$10 Off</Text>
@@ -50,7 +44,7 @@ function HomePage() {
                 </Button>
               </VStack>
             </GridItem>
-            <GridItem w="100%" h="200" bg="white" p={14}>
+            <GridItem w="100%" bg="white" p={10}>
               <VStack>
                 <Text>Today Only!</Text>
                 <Text>$10 Off</Text>
@@ -59,7 +53,7 @@ function HomePage() {
                 </Button>
               </VStack>
             </GridItem>
-            <GridItem w="100%" h="200" bg="white" p={14}>
+            <GridItem w="100%" bg="white" p={10}>
               <VStack>
                 <Text>Today Only!</Text>
                 <Text>$10 Off</Text>
@@ -68,7 +62,7 @@ function HomePage() {
                 </Button>
               </VStack>
             </GridItem>
-            <GridItem w="100%" h="200" bg="white" p={14}>
+            <GridItem w="100%" bg="white" p={10}>
               <VStack>
                 <Text>Today Only!</Text>
                 <Text>$10 Off</Text>
@@ -77,18 +71,18 @@ function HomePage() {
                 </Button>
               </VStack>
             </GridItem>
-          </Grid>
+          </SimpleGrid>
         </Box>
       </Box>
       <Box p={5}>
         <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw45ce316f/images/Fall2022/bc_sweaterweather_fa1_hm.jpg?yocs=s_" />
       </Box>
       <Box p={5}>
-        <Box h="400px">
+        <Box>
           <Text align="center" fontSize="3xl" mb={5}>
             SHOP BY CATEGORIES
           </Text>
-          <Grid templateColumns="repeat(6, 1fr)" gap={6}>
+          <SimpleGrid columns={[2, 3, 6]} gap={6}>
             <GridItem>
               <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.217/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw415d6bf8/images/Fall2022/bc_midamber_sfl_fa1_vn2.jpg?yocs=o_s_" />
               <Text align="center">Today Only!</Text>
@@ -113,7 +107,7 @@ function HomePage() {
               <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.217/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw5a02a7ff/images/Fall2022/bc_ingredientled_fa1_vn2.jpg?yocs=o_s_" />
               <Text align="center">Today Only!</Text>
             </GridItem>
-          </Grid>
+          </SimpleGrid>
         </Box>
       </Box>
       <Box align="center">
@@ -136,7 +130,9 @@ function HomePage() {
           <Box>
             <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwa2209c56/images/Fall2022/bc_midamber_sfl_fa1_atb.jpg?yocs=o_s_" />
           </Box>
-          <Box bgColor="red"></Box>
+          <Box>
+            <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwe67edd78/images/Fall2022/xcat_ingredientled_fa1_hps.jpg?yocs=o_s_" />
+          </Box>
           <Box>
             <Img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw241908af/images/Fall2022/xcat_roadtrip_fa1_hps.jpg?yocs=o_s_" />
           </Box>
@@ -162,12 +158,12 @@ function HomePage() {
 
       <Box p={5}>
         <SimpleGrid columns={[2, 2, 3, 6]} spacing={5}>
-          <Box rounded="false">TOP COLLECTION</Box>
-          <Box rounded="false">TOP COLLECTION</Box>
-          <Box rounded="false">TOP COLLECTION</Box>
-          <Box rounded="false">TOP COLLECTION</Box>
-          <Box rounded="false">TOP COLLECTION</Box>
-          <Box rounded="false">TOP COLLECTION</Box>
+          <Button rounded="false">TOP COLLECTION</Button>
+          <Button rounded="false">TOP COLLECTION</Button>
+          <Button rounded="false">TOP COLLECTION</Button>
+          <Button rounded="false">TOP COLLECTION</Button>
+          <Button rounded="false">TOP COLLECTION</Button>
+          <Button rounded="false">TOP COLLECTION</Button>
         </SimpleGrid>
       </Box>
       <Text align="center" fontSize="3xl">
@@ -181,42 +177,54 @@ function HomePage() {
               boxSize="200"
               src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw8f6e14ad/images/Spring2022/xcat_mwts-bopis_sp2_vn.jpg?yocs=o_s_"
             />
-            <Text fontSize="16px">Shop—it’s fast, free, easy</Text>
+            <Text fontSize="16px" align="center">
+              Shop—it’s fast, free, easy
+            </Text>
           </Box>
           <Box>
             <Img
               boxSize="200"
               src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw644e724c/images/Spring2022/xcat_mwts-sms_sp2_vn.jpg?yocs=o_s_"
             />
-            <Text fontSize="16px">Sign up for texts</Text>
+            <Text align="center" fontSize="16px">
+              Sign up for texts
+            </Text>
           </Box>
           <Box>
             <Img
               boxSize="200"
               src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw41a3328c/images/Spring2022/xcat_mwts-email_sp2_vn.jpg?yocs=o_s_"
             />
-            <Text fontSize="16px">Sign up for emails</Text>
+            <Text align="center" fontSize="16px">
+              Sign up for emails
+            </Text>
           </Box>
           <Box>
             <Img
               boxSize="200"
               src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw611329aa/images/Spring2022/xcat_mwts-autorefresh_sp2_vn.png?yocs=o_s_"
             />
-            <Text fontSize="16px">Checkout for auto refresh</Text>
+            <Text align="center" fontSize="16px">
+              Checkout for auto refresh
+            </Text>
           </Box>
           <Box>
             <Img
               boxSize="200"
               src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwb9d60d44/images/Fall2022/boc-launch-prospects_vn_0.png?yocs=o_s_"
             />
-            <Text fontSize="16px">join the VIPs</Text>
+            <Text align="center" fontSize="16px">
+              join the VIPs
+            </Text>
           </Box>
           <Box>
             <Img
               boxSize="200"
               src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw4dd3c5f1/images/Spring2022/xcat_mwts-returns_sp2_vn.jpg?yocs=o_s_"
             />
-            <Text fontSize="16px">See the return policy</Text>
+            <Text align="center" fontSize="16px">
+              See the return policy
+            </Text>
           </Box>
         </SimpleGrid>
       </Box>

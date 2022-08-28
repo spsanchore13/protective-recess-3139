@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 
 function SignUpPage(props) {
-  console.log(props);
   const { isOpen, setIsOpen } = props;
   const onClose = () => {
     setIsOpen(false);
